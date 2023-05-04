@@ -1,8 +1,8 @@
-const input1 = document.getElementById('input-1');
+const input = document.getElementById('input');
 const text = document.querySelector('.text');
 
 function updateText() {
-    text.innerHTML = input1.value 
+    text.innerHTML = input.value 
 };
 
 setInterval(updateText, 0);
