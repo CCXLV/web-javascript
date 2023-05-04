@@ -1,8 +1,19 @@
 const input = document.getElementById('input');
 const text = document.querySelector('.text');
 
-function updateText() {
-    text.innerHTML = input.value 
-};
+const array = [
+    'Go ahead', 'Come on type something',
+    'What are you waiting for?',
+    'Hello?',
+]
 
-setInterval(updateText, 0);
+
+input.addEventListener('input', function() { 
+    if (input.value.length === 0) {
+        const randomIndex = Math.floor(Math.random() * array.length);
+        const randomString = array[randomIndex];
+        text.innerHTML = randomString;
+    } else {
+        text.innerHTML = input.value;
+    }
+});
